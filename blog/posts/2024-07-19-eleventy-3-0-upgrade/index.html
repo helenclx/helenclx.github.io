@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+    <head>
+        
+        <meta property="og:title" content="Aboard the Eleventy 3.0 Train">
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Helen Chong">
+<meta name="description" content="My developer portfolio and blog website has been officially upgraded to Eleventy 3.0.">
+<meta name="generator" content="Eleventy v3.0.0">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://helenchong.dev/blog/posts/2024-07-19-eleventy-3-0-upgrade/">
+<meta property="og:site_name" content="Helen Chong | Front-End Web Developer">
+<meta property="og:locale" content="en_MY">
+<meta property="og:description" content="My developer portfolio and blog website has been officially upgraded to Eleventy 3.0.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="https://helenchong.dev/blog/posts/2024-07-19-eleventy-3-0-upgrade/">
+<meta name="twitter:description" content="My developer portfolio and blog website has been officially upgraded to Eleventy 3.0.">
+<link rel="canonical" href="https://helenchong.dev/blog/posts/2024-07-19-eleventy-3-0-upgrade/">
+
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/assets/icons/favicon/site.webmanifest">
+
+        
+        <link rel="stylesheet" href="/assets/css/global.css"><link rel="stylesheet" href="/assets/css/general.css"><link rel="stylesheet" href="/assets/css/home.css"><link rel="stylesheet" href="/assets/css/components.css"><link rel="stylesheet" href="/assets/css/projects.css"><link rel="stylesheet" href="/assets/css/contact.css"><link rel="stylesheet" href="/assets/css/content.css"><link rel="stylesheet" href="/assets/css/blog.css"><link rel="stylesheet" href="/assets/css/socials.css"><link rel="stylesheet" href="/assets/css/a11y-syntax-highlighting-light.css"><link rel="stylesheet" href="/assets/css/a11y-syntax-highlighting-dark.css"><link rel="stylesheet" href="/assets/css/utility.css">
+        <style>.toc__wrapper {
+        max-height: 89vh;
+        overflow-x: auto;
+        padding: 0.3em 1.3rem 1.5em;
+    }
+
+    .toc__heading {
+        font-size: 1.3rem;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .toc ol,
+    .toc ol ol {
+        display: grid;
+        gap: 0.7em;
+    }
+
+    .toc ol {
+        border-top: 0.1em solid var(--clr-txt-default);
+        padding-left: 1.3em;
+        padding-top: 1em;
+    }
+
+    .toc ol ol {
+        border-top: none;
+        list-style-type: disc;
+        padding-left: 1em;
+        padding-top: 0.5em;
+        margin: 0;
+    }
+
+    .toc ol a {
+        font-size: 1.1rem;
+        padding-left: 0.3em;
+    }
+
+    .toc ol ol a {
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    @media only screen and (min-width: 60rem) {
+        .toc__wrapper { padding-bottom: var(--sz-content-bottom); }
+    }
+.header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 1rem 1.5rem;
+        background-color: var(--clr-body-bg);
+        box-shadow: var(--bs-main);
+        z-index: 998;
+        position: static;
+        top: 0;
+    }
+
+    .header__title {
+        color: var(--clr-accent-600);
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    .header__title a:focus,
+    .header__toggle:focus {
+        outline: 0.12em solid var(--clr-accent-600);
+    }
+    .header__title > a { text-decoration: none; }
+
+    .header__toggle {
+        border: none;
+        background-color: transparent;
+        font-size: 2rem;
+        padding: 0;
+        display: none;
+        justify-content: center;
+    }
+
+    .header__toggle svg { fill: var(--clr-txt-default); }
+    .header__toggle:focus { outline-offset: 0.15em; }
+
+    .header__navmenu {
+        list-style-type: "";
+        padding: 0;
+        margin: 1em 0 0 0;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--clr-accent-600);
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em 1em;
+    }
+
+    .header__links { display: flex; }
+
+    .header__popover {
+        background-color: var(--clr-body-bg);
+        border: 0.15em solid var(--clr-accent-600);
+        padding: 1.5em;
+        box-shadow: var(--bs-main);
+        max-width: 80%;
+    }
+
+    .header__popover::backdrop {
+        background-color: black;
+        opacity: 0.5;
+    }
+
+    .header__navmenu [aria-current="page"],
+    .link--active { color: var(--clr-link-hover); }
+
+    .header__link {
+        position: relative;
+        font-size: 1.125rem;
+        text-decoration: none;
+    }
+
+    .header__link::after {
+        content: "";
+        left: 0px;
+        bottom: -4px;
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        background-color: var(--clr-link-hover);
+        transform: scaleX(0);
+        transition: transform 0.3s ease 0s;
+    }
+
+    .header__link:hover::after,
+    .header__navmenu [aria-current="page"]::after,
+    .link--active::after { transform: scaleX(1); }
+
+    .header__link:focus {
+        outline: 0.2em solid var(--clr-accent-600);
+        outline-offset: 0.1em;
+    }
+
+    @supports selector([popover]) {
+        .header__toggle { display: flex; }
+        .header__links { display: none; }
+        .header__navmenu { margin: 0; }
+        .header { position: sticky; }
+    }
+
+    /* For larger screen sizes */
+    @media (min-width: 640px) {
+        .header__title { margin-bottom: 0; }
+    }
+
+    /* Tablet screen size */
+    @media only screen and (min-width: 43.75rem) {
+        .header { position: sticky; }
+        .header__navmenu { margin: 0; }
+        .header__toggle, .header__popover { display: none; }
+        .header__links { display: flex; }
+    }
+.top-btn, .top-btn:hover { color: var(--clr-top-btn-txt); }
+
+    .top-btn {
+        position: fixed;
+        bottom: 0.5rem;
+        right: 0.5rem;
+        z-index: 999;
+
+        background-color: var(--clr-top-btn-bg);
+        border-radius: 50em;
+        height: 2rem;
+        aspect-ratio: 1 / 1;
+    }
+
+    .top-btn:focus {
+        outline: 0.25em solid var(--clr-top-btn-bg);
+        outline-offset: 0.15em;
+    }
+
+    .top-link::before,
+    .top-link::after {
+        --arrow-margin: 0.3em;
+        content: "";
+        display: inline-block;
+        border-bottom: 0.6rem solid currentColor;
+        border-left: 0.4rem solid transparent;
+        border-right: 0.4rem solid transparent;
+    }
+
+    .top-link::before { margin: 0 var(--arrow-margin) 0 0; }
+    .top-link::after { margin: 0 0 0 var(--arrow-margin); }
+.footer {
+        width: 100%;
+        padding: 2em 1em clamp(2em, calc(100% - 2rem), 3em);
+        text-align: center;
+        display: flex;
+        gap: 0.5em;
+        flex-direction: column;
+        box-shadow: var(--bs-footer);
+    }</style>
+
+        
+        <link rel="me" href="mailto:contact@helenchong.dev">
+        <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+
+        
+        <link rel="webmention" href="https://webmention.io/helenchong.dev/webmention">
+
+        
+        <script src="/assets/js/3ZCNRNkKuw.js" defer></script>
+    
+        <script src="/assets/js/details-utils.js" defer></script>
+    
+
+        <title> Aboard the Eleventy 3.0 Train |  Helen Chong | Front-End Web Developer</title>
+    </head>
+    <body>
+        <div class="skip-btn"><a href="#content">Skip to content</a></div>
+        
+
+
+
+<header class="header">
+    <h2 class="header__title">
+        <a  href="/">Helen Chong</a>
+    </h2>
+    <nav aria-labelledby="top-nav-title">
+        <h3 class="visually-hidden" id="top-nav-title">Main</h3>
+        <ul class="header__navmenu header__links">
+    
+        <li><a
+            
+            class="header__link "
+            href="/about/">
+                About
+        </a></li>
+        <li><a
+            
+            class="header__link "
+            href="/now/">
+                Now
+        </a></li>
+        <li><a
+            
+            class="header__link link--active"
+            href="/blog/">
+                Blog
+        </a></li>
+        <li><a
+            
+            class="header__link "
+            href="/projects/">
+                Projects
+        </a></li>
+        <li><a
+            
+            class="header__link "
+            href="/contact/">
+                Contact
+        </a></li>
+</ul>
+        <button class="header__toggle" popovertarget="nav-menu" aria-labelledby="nav-toggle-title">
+            <svg aria-hidden="true" focusable="false" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+            <span id="nav-toggle-title" class="visually-hidden">Toggle navigation menu</span>
+        </button>
+    </nav>
+    <div popover id="nav-menu" class="header__popover">
+        <ul class="header__navmenu">
+    
+        <li><a
+            
+            class="header__link "
+            href="/about/">
+                About
+        </a></li>
+        <li><a
+            
+            class="header__link "
+            href="/now/">
+                Now
+        </a></li>
+        <li><a
+            
+            class="header__link link--active"
+            href="/blog/">
+                Blog
+        </a></li>
+        <li><a
+            
+            class="header__link "
+            href="/projects/">
+                Projects
+        </a></li>
+        <li><a
+            
+            class="header__link "
+            href="/contact/">
+                Contact
+        </a></li>
+</ul>
+    </div>
+</header>
+        <main id="content">
+            
+<header class="main__header">
+    
+    <nav aria-labelledby="breadcrumbs-title">
+        <h2 class="visually-hidden" id="breadcrumbs-title">Breadcrumbs</h2>
+        <ol class="breadcrumbs">
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            <li>
+                <a href="/blog/posts/">Archive</a>
+            </li>
+        </ol>
+    </nav>
+
+
+
+    <h1 class="heading--main">Aboard the Eleventy 3.0 Train</h1>
+
+    
+        <div class="blog__post--info">
+            <p><span class="text-bold">Posted:</span> 19 July 2024 by Helen Chong</p>
+            
+            <p><span class="text-bold">Categories:</span>
+                
+                    <a href="/blog/categories/about-this-website">about this website</a>, 
+                
+                    <a href="/blog/categories/eleventy">eleventy</a>, 
+                
+                    <a href="/blog/categories/javascript">javascript</a>
+                
+            </p>
+            <p>🍿  5 min. read</p>
+        </div>
+    
+</header>
+
+<content-wrapper>
+    
+        <aside class="left-sidebar" aria-label="Left sidebar">
+    <details-utils force-open="(min-width: 60rem)" force-restore>
+        <details class="toc__wrapper sidebar--sticky">
+            <summary class="toc__heading" id="toc-heading">
+                Table of Contents
+            </summary>
+            <nav class="toc" aria-labelledby="toc-heading"><ol><li><a href="#why-upgrading-to-30">Why Upgrading to 3.0</a><ol><li><a href="#esm-support">ESM Support</a></li>
+<li><a href="#built-in-bundle-plugin">Built-In Bundle Plugin</a></li></ol></li>
+<li><a href="#step-1-changing-my-packagejson-scripts">Step 1: Changing My package.json Scripts</a></li>
+<li><a href="#step-2-bundling-css-and-javascript">Step 2: Bundling CSS and JavaScript</a></li>
+<li><a href="#step-3-converting-commonjs-to-esm">Step 3: Converting CommonJS to ESM</a></li>
+<li><a href="#conclusion">Conclusion</a></li></ol></nav>
+        </details>
+    </details-utils>
+</aside>
+
+    
+
+    
+    <article class="prose">
+        <p>On 9 April 2024, I <a href="/blog/posts/2024-04-11-rebuilding-my-developer-portfolio-with-eleventy/">rebuilt this developer portfolio and blog website of mine</a> with Eleventy 2.0.1. Three months after using Eleventy and loving it, now I have upgraded Eleventy to 3.0! 🥳</p>
+<p>Version 3.0 of Eleventy is still in alpha, but as I have been following Eleventy's development and community after starting to use it, and learning about other Eleventy users upgrading to version 3.0, I began to consider hopping on the Eleventy 3.0 train. Now that I have done it, I guess I am one of Eleventy's &quot;courageous canary testers&quot;, <a href="https://www.11ty.dev/blog/canary-eleventy-v3/">as the official Eleventy blog put it</a>, haha. 😆</p>
+<div class="heading-wrapper h2">
+<h2 id="why-upgrading-to-30">Why Upgrading to 3.0</h2>
+<a class="heading-anchor" href="#why-upgrading-to-30" aria-labelledby="why-upgrading-to-30"><span hidden>#</span></a></div>
+<div class="heading-wrapper h3">
+<h3 id="esm-support">ESM Support</h3>
+<a class="heading-anchor" href="#esm-support" aria-labelledby="esm-support"><span hidden>#</span></a></div>
+<p>The first major factor that made me consider upgrading Eleventy to 3.0 is 3.0's support for ECMAScript Modules (ESM).</p>
+<p>Since I began to learn web development more seriously starting from December 2022, I have been using ESM in my JavaScript projects, including vanilla JavaScript and React, due to that being what is taught in Scrimba's JavaScript and React courses. As a consequence, Eleventy 2.0 was my first time using CommonJS, so I had to learn the syntax differences between the CommonJS and ESM. I learned about 3.0's ESM support soon after I began to use Eleventy, but I decided to stick to 2.0 for a bit because I wanted to familiarise myself with Eleventy first.</p>
+<p>As I learned to use Eleventy more and becoming more satisfied with my decision to build my website with it, I felt more confident in my ability of trying out an alpha release of Eleventy.</p>
+<div class="heading-wrapper h3">
+<h3 id="built-in-bundle-plugin">Built-In Bundle Plugin</h3>
+<a class="heading-anchor" href="#built-in-bundle-plugin" aria-labelledby="built-in-bundle-plugin"><span hidden>#</span></a></div>
+<p>Another major push for me to upgrade to Eleventy 3.0 was its <a href="https://github.com/11ty/eleventy-plugin-bundle">built-in bundle plugin</a>. I have been considering to use the plugin to bundle my CSS and JavaScript for specific components, including the header, footer, scroll-to-top button link, and so on, so the CSS and JavaScript code blocks I wrote in the components' templates would be bundled into the <code>&lt;head&gt;</code> element. Without bundling the CSS and JavaScript, the <code>&lt;style&gt;</code> and <code>&lt;script&gt;</code> tags would scatter across the <code>&lt;body&gt;</code> element in the HTML output, which is not a good practice, as the <a href="https://validator.w3.org/">W3C Markdown Validation Service</a> would output errors when I checked the HTML output.</p>
+<p>Previously, Eleventy's bundle plugin was a separate plugin that needed to be installed manually, as seen in the <a href="https://github.com/11ty/eleventy-base-blog">Eleventy base blog</a> starter project, which uses Eleventy 2.0.1, though starting with Eleventy v3.0.0-alpha.10, the bundle plugin is now bundled with Eleventy.</p>
+<p>Therefore, I finally made the jump, by keying in <code>bun install @11ty/eleventy@canary --save-exact</code> in my website's folder on the terminal, and voilà! Eleventy 3.0 here I come!</p>
+<p>(Yes, I use <a href="https://bun.sh/">Bun</a> as the JavaScript runtime for developing my Eleventy website and deploying it to GitHub Pages, and it works since Bun is meant to be a drop-in replacement for Node.js)</p>
+<div class="heading-wrapper h2">
+<h2 id="step-1-changing-my-packagejson-scripts">Step 1: Changing My <code>package.json</code> Scripts</h2>
+<a class="heading-anchor" href="#step-1-changing-my-packagejson-scripts" aria-labelledby="step-1-changing-my-packagejson-scripts"><span hidden>#</span></a></div>
+<p>A change I had to made immediately after installing Eleventy 3.0 was to edit my <code>package.json</code> scripts for Eleventy, including &quot;start&quot; and &quot;build&quot; scripts, by replacing <code>@11ty/eleventy</code> to just <code>eleventy</code>, since otherwise the terminal will output an error saying &quot;Script not found '@11ty/eleventy'&quot;.</p>
+<p>This happens when I run the Eleventy commands with either <code>npm</code> or <code>bun</code>.</p>
+<div class="heading-wrapper h2">
+<h2 id="step-2-bundling-css-and-javascript">Step 2: Bundling CSS and JavaScript</h2>
+<a class="heading-anchor" href="#step-2-bundling-css-and-javascript" aria-labelledby="step-2-bundling-css-and-javascript"><span hidden>#</span></a></div>
+<p>With problems with my <code>package.json</code> scripts solved, I could finally begin my process to transform my website to an Eleventy 3.0 site, by starting with bundling my component-specific CSS and JavaScript.</p>
+<p>I followed the instructions from <a href="https://github.com/11ty/eleventy-plugin-bundle">Eleventy bundle plugin's GitHub repository</a>, by adding <code>addBundle(&quot;css&quot;)</code> and <code>addBundle(&quot;js&quot;)</code> to my Eleventy configuration file.</p>
+<p>I want to write my bundled JavaScript into files with the <code>getBundleFileUrl</code> shortcode, so I can add the <code>defer</code> HTML attribute to the <code>&lt;script&gt;</code> tags that load the bundled file. For this purpose, I use the <code>toFileDirectory</code> to configure my JavaScript bundle to write the bundled JavaScript files into the output's assets folder and its JavaScript subfolder, so the setup to bundle my CSS and JavaScript in my Eleventy configuration file becomes this:</p>
+<pre class="language-js" tabindex="0"><code class="language-js">eleventyConfig<span class="token punctuation">.</span><span class="token function">addBundle</span><span class="token punctuation">(</span><span class="token string">"css"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+eleventyConfig<span class="token punctuation">.</span><span class="token function">addBundle</span><span class="token punctuation">(</span><span class="token string">"js"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">toFileDirectory</span><span class="token operator">:</span> <span class="token string">"assets/js"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Next, I opened the base layout template for my entire website, and added the <code>getBundle</code> shortcode for CSS and <code>getBundleFileUrl</code> shortcode for JavaScript in the <code>&lt;head&gt;</code> element, then I replaced the <code>&lt;style&gt;</code> and <code>&lt;script&gt;</code> tags in my component Nunjucks templates with <code>{% css %}</code> and <code>{% js %}</code> shortcodes.</p>
+<p>Now my component-specific CSS and JavaScript are bundled in the output.</p>
+<div class="heading-wrapper h2">
+<h2 id="step-3-converting-commonjs-to-esm">Step 3: Converting CommonJS to ESM</h2>
+<a class="heading-anchor" href="#step-3-converting-commonjs-to-esm" aria-labelledby="step-3-converting-commonjs-to-esm"><span hidden>#</span></a></div>
+<p>It was finally time to go all way in using ESM in my projects that use JavaScript, including Eleventy, by converting all CommonJS syntax in my Eleventy configuration and data files to ESM.</p>
+<p>The first step was to add <code>&quot;type&quot;: &quot;module&quot;</code> to my <code>package.json</code>, to make my Eleventy project environment support ESM.</p>
+<p>Fun fact: When you create a <code>package.json</code> file with Bun, <code>&quot;type&quot;: &quot;module&quot;</code> will be added by default. This actually tripped me up when I created my Eleventy 2.0 website with Bun, and made me learn about the differences between CommonJS and ESM the hard way, so I had to remove <code>&quot;type&quot;: &quot;module&quot;</code>. Therefore, it feels good to have <code>&quot;type&quot;: &quot;module&quot;</code> back to my <code>package.json</code> file.</p>
+<p>Fortunately, Visual Studio Code, my go-to code editor, can automatically convert the CommonJS syntax of the imports in my Eleventy configuration files and the exports of the Eleventy configuration functions to ESM. Visual Studio Code also converts the <code>module.exports</code> syntax in my website metadata file, by assigning <code>const</code> variables and adding the <code>export</code> declaration, which allows me to use the variables and their values in other variables in the same file, without using the <code>this</code> keyword. For example:</p>
+<pre class="language-js" tabindex="0"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">const</span> siteDomain <span class="token operator">=</span> <span class="token string">"helenchong.dev"</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> siteUrl <span class="token operator">=</span> <span class="token string">"https://"</span> <span class="token operator">+</span> siteDomain <span class="token operator">||</span> <span class="token string">"http://localhost:8080"</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> siteAuthor <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">"Helen Chong"</span><span class="token punctuation">,</span>
+    email<span class="token operator">:</span> <span class="token string">"contact@helenchong.dev"</span><span class="token punctuation">,</span>
+    url<span class="token operator">:</span> siteUrl <span class="token operator">+</span> <span class="token string">"/about"</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> siteDescription <span class="token operator">=</span> siteAuthor<span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">"'s developer portfolio and blog website."</span><span class="token punctuation">;</span></code></pre>
+<p>However, I needed to manually change the <code>require()</code> functions inside the Eleventy configuration function, by using the <code>import</code> declaration at the top of the file, and assign them variables.</p>
+<p>The process of converting CommonJS to ESM in my Eleventy website was smoother than I expected. It might be because my website is not that complex, and my methods of organising my website files were relatively compatible with ESM.</p>
+<div class="heading-wrapper h2">
+<h2 id="conclusion">Conclusion</h2>
+<a class="heading-anchor" href="#conclusion" aria-labelledby="conclusion"><span hidden>#</span></a></div>
+<p>My website's transition to an Eleventy 3.0 site is a success, and I could not be happier with my decision to make the upgrade. If you like Eleventy, I highly recommend giving 3.0 a try.</p>
+<p>Hello, Eleventy 3.0! 👋</p>
+
+
+    
+        <nav class="blog__post--pagination" aria-labelledby="nextprev-title">
+            <h2 class="visually-hidden" id="nextprev-title">Next and Previous Blog Posts</h2>
+                    <ul class="blog__post--nextprev">
+                        <li class="blog__post--prev">
+                            <p>Previous Post:</p>
+                            <a href="/blog/posts/2024-07-08-dipping-my-toes-in-php-for-my-hobby-project/">Dipping My Toes in PHP for My Hobby Project</a>
+                        </li>
+                    
+                        <li class="blog__post--next">
+                            <p>Next Post:</p>
+                            <a href="/blog/posts/2024-07-23-responsive-disability-pride-flag-css/">Responsive Disability Pride Flag CSS Background</a>
+                        </li>
+                    
+                    </ul>
+        </nav>
+    
+    </article>
+
+    
+        
+<aside class="right-sidebar">
+    <nav class="blog__nav sidebar--sticky" aria-labelledby="blog-nav-title">
+        <h2 class="blog__nav--title" id="blog-nav-title">Blog Navigation</h2>
+        <ul class="blog__nav--links">
+            <li><a  href="/blog/">Index</a></li>
+            
+                <li><a
+                    
+                    href="/blog/categories/">
+                        Categories
+                </a></li>
+                <li><a
+                    
+                    href="/blog/posts/">
+                        Archive
+                </a></li>
+            <li><a href="/blog/feed.xml">RSS</a></li>
+        </ul>
+    </nav>
+</aside>
+
+    
+</content-wrapper>
+        </main>
+        <footer class="footer">
+    <nav class="socials" aria-labelledby="social-link-title">
+    <h2 class="visually-hidden" id="social-link-title">Social Links:</h2>
+    <ul class="socials__links">
+        <li>
+            <a href="https://github.com/helenclx" aria-label="GitHub" rel="me">
+                <svg class="socials__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://tech.lgbt/@helenclx" aria-label="Mastodon" rel="me">
+                <svg class="socials__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M433 179.1c0-97.2-63.7-125.7-63.7-125.7-62.5-28.7-228.6-28.4-290.5 0 0 0-63.7 28.5-63.7 125.7 0 115.7-6.6 259.4 105.6 289.1 40.5 10.7 75.3 13 103.3 11.4 50.8-2.8 79.3-18.1 79.3-18.1l-1.7-36.9s-36.3 11.4-77.1 10.1c-40.4-1.4-83-4.4-89.6-54a102.5 102.5 0 0 1 -.9-13.9c85.6 20.9 158.7 9.1 178.8 6.7 56.1-6.7 105-41.3 111.2-72.9 9.8-49.8 9-121.5 9-121.5zm-75.1 125.2h-46.6v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.3V197c0-58.5-64-56.6-64-6.9v114.2H90.2c0-122.1-5.2-147.9 18.4-175 25.9-28.9 79.8-30.8 103.8 6.1l11.6 19.5 11.6-19.5c24.1-37.1 78.1-34.8 103.8-6.1 23.7 27.3 18.4 53 18.4 175z"/></svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://twitter.com/helen_clx" aria-label="Twitter" rel="me">
+                <svg class="socials__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z"/></svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://bsky.app/profile/helenchong.dev" aria-label="Bluesky" rel="me">
+                <svg class="socials__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3zM288 227.1C261.9 176.4 190.9 81.9 124.9 35.3C61.6-9.4 37.5-1.7 21.6 5.5C3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7c3.3-.5 6.6-.9 10-1.4c-3.3 .5-6.6 1-10 1.4C74.3 308.6-9.1 342.8 100.3 464.5C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4c102.4-103.4 28.1-156-65.8-169.9c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3c64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1z"/></svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/helenclx/" aria-label="LinkedIn" rel="me">
+                <svg class="socials__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+
+    <p>Built with &#x2661; by Helen Chong. 2023–2024.</p>
+
+    <ul class="inline-list">
+        <li><a href="/blog/feed.xml">RSS Feed</a></li><li><a
+            
+            href="/accessibility/"
+        >Accessibility</a></li><li><a
+            
+            href="/colophon/"
+        >Colophon</a></li></ul>
+
+    <p>Built with <a href="https://www.11ty.dev/">Eleventy</a>. <a href="https://github.com/helenclx/helenclx.github.io">Source Code</a>.</p>
+
+    
+
+<a href="#top" class="top-btn hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M7 11l5-5m0 0l5 5m-5-5v12"></path>
+    </svg>
+    <span class="visually-hidden">Back to Top</span>
+</a>
+<noscript>
+    <p><a class="top-link" href="#top">Back to Top</a></p>
+</noscript>
+    <div class="h-card hidden">
+    <span class="p-name">Helen Chong</span>
+    <span class="p-given-name">Helen</span>
+    <span class="p-family-name">Chong</span>
+    <a href="/" class="u-url">Home page</a>
+    <img src="/assets/images/profile/avatar-helen-chong.avif" alt="Helen Chong, Front-End Developer" class="u-photo">
+    <span class="p-country-name">Malaysia</span>
+    <span class="p-note">Graphic designer turned front-end web developer.</span>
+</div>
+</footer>
+    </body>
+</html>

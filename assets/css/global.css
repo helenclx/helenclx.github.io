@@ -1,0 +1,128 @@
+/* ------------------- */
+/* Custom Properties   */
+/* ------------------- */
+:root {
+    --clr-body-bg: #fff;
+    --clr-txt-default: #0e0e0e;
+
+    --clr-slate-300: #5d5d5d;
+    --clr-slate-600: #383838;
+    --clr-accent-100: #edcfff;
+    --clr-accent-600: #a200ff;
+    --clr-accent-700: #8200cd;
+    --clr-accent-800: rgb(90, 0, 142);
+
+    --clr-link-hover: #c83c00;
+    --clr-code-bg: #f2f1f1;
+    --clr-code-border: #616161;
+    --clr-top-btn-bg: #4153b6;
+    --clr-top-btn-txt: #fff;
+
+    --fs-main-txt: 1.2rem;
+    --fs-h1: clamp(2rem, 1rem + 5vw, 3rem);
+    --fs-h2: clamp(1.55rem, 1rem + 3vw, 2.15rem);
+    --fs-h3: clamp(1.55rem, 1rem + 3vw, 1.8rem);
+    --fs-h4: clamp(1.4rem, 1rem + 3vw, 1.6rem);
+
+    --sz-main-padding: clamp(1em, 5%, 1.5em);
+    --sz-paragraph-margin: 1.15em;
+    --sz-list-gap: 0.7em;
+    --sz-content-bottom: 4em;
+
+    --bs-main: 0 10px 15px -3px rgba(0, 0, 0, 0.3),
+        0 4px 6px -4px rgb(0 0 0 / 0.2);
+    --bs-footer: 0 -10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --clr-body-bg: #0e0e0e;
+        --clr-txt-default: #fff;
+
+        --clr-slate-300: #f8f8f8;
+        --clr-slate-600: #f6f6f6;
+        --clr-accent-100: #4c004c;
+        --clr-accent-600: #da85ff;
+        --clr-accent-700: #cb7aff;
+        --clr-accent-800: #d09dff;
+
+        --clr-link-hover: #fe6625;
+        --clr-code-bg: #2a2a2a;
+        --clr-code-border: #616161;
+
+        --bs-main: 0 10px 15px -3px rgba(162, 162, 162, 0.5),
+        0 4px 6px -4px rgba(129, 129, 129, 0.5);
+        --bs-footer: 0 -10px 15px -3px rgba(215, 215, 215, 0.5);
+    }
+}
+
+/* ------------------- */
+/* CSS Reset           */
+/* ------------------- */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style-type: "";
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+    text-wrap: balance;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}

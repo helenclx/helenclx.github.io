@@ -1,0 +1,27 @@
+/* Socials Style */
+.socials {
+    grid-area: scial;
+    justify-self: center;
+    margin: 0 auto;
+}
+
+.socials__links {
+    list-style-type: "";
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.socials a { display: inline-flex; }
+
+.socials a:focus {
+    outline: 0.15em solid var(--clr-accent-700);
+    outline-offset: 0.15em;
+}
+
+.socials__icon {
+    height: 2rem;
+    fill: var(--clr-accent-700);
+}
