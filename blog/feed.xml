@@ -4,12 +4,78 @@
     <subtitle>Helen Chong talks about tech, coding and development</subtitle>
     <link href="https://helenchong.dev/blog/feed.xml" rel="self"/>
     <link href="https://helenchong.dev/blog/"/>
-    <updated>2024-07-23T00:00:00Z</updated>
+    <updated>2024-07-31T00:00:00Z</updated>
     <id>https://helenchong.dev/blog/</id>
     <author>
         <name>Helen Chong</name>
         <email>contact@helenchong.dev</email>
     </author>
+        
+        <entry>
+            <title>Migrating My Website to Hostinger</title>
+            <link href="https://helenchong.dev/blog/posts/2024-07-31-migrating-to-hostinger/"/>
+            <updated>2024-07-31T00:00:00Z</updated>
+            <id>https://helenchong.dev/blog/posts/2024-07-31-migrating-to-hostinger/</id>
+            <content type="html">&lt;p&gt;Starting from 20 July 2024, &lt;code&gt;helenchong.dev&lt;/code&gt;, my developer portfolio and blog website, has migrated from GitHub Pages to Hostinger as its web host.&lt;/p&gt;
+&lt;p&gt;This website was hosted on GitHub Pages since its creation, and has come a long way since its launch in February 2023, from &lt;a href=&quot;https://helenchong.dev/blog/posts/2023-08-21-Welcome-to-Helen-Codes/&quot;&gt;adding a blog&lt;/a&gt;, &lt;a href=&quot;https://helenchong.dev/blog/posts/2024-04-11-rebuilding-my-developer-portfolio-with-eleventy/&quot;&gt;being rebuilt with Eleventy&lt;/a&gt; to &lt;a href=&quot;https://helenchong.dev/blog/posts/2024-05-29-custom-domain-name-helenchong-dev/&quot;&gt;getting its own domain name&lt;/a&gt;. This website started out as a standard developer portfolio, but as I grew as an aspiring web developer, so did my website.&lt;/p&gt;
+&lt;p&gt;Therefore, I decided that it was time to take my website to another level to allow both my website and myself as a developer more room to grow, starting with migrating from GitHub Pages.&lt;/p&gt;
+&lt;div class=&quot;heading-wrapper h2&quot;&gt;
+&lt;h2 id=&quot;why-moving-hosts&quot;&gt;Why Moving Hosts&lt;/h2&gt;
+&lt;a class=&quot;heading-anchor&quot; href=&quot;https://helenchong.dev/blog/posts/2024-07-31-migrating-to-hostinger/#why-moving-hosts&quot; aria-labelledby=&quot;why-moving-hosts&quot;&gt;&lt;span hidden=&quot;&quot;&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;GitHub Pages is decent for hosting static sites. You can host a static site on GitHub Pages by directly deploying a Git repository. It certainly helps that you can do so for free, and if you already have a custom domain name, you can use it on your GitHub Pages website without additional costs. I still think GitHub Pages is a good platform if you are just starting out building your website or blog, especially if you are unsure if you are going to commit to it.&lt;/p&gt;
+&lt;p&gt;However, as I grew as a web developer and began to explore more advance topics about web development, I started to desire for more control over my own website. A notable disadvantage of GitHub Pages compared to web hosting services that support dynamic websites is the lack of &lt;code&gt;.htaccess&lt;/code&gt; support. Learning about the things &lt;code&gt;.htaccess&lt;/code&gt; can do has tempted me to consider migrating away form GitHub Pages.&lt;/p&gt;
+&lt;p&gt;Furthermore, in addition to this developer portfolio and blog website, I have also built various hobby websites, so it would be nice if I could consolidate the management of my websites into one platform.&lt;/p&gt;
+&lt;p&gt;Last but not least, I am invested in web development and building my own website  enough to be willing to spend money on them, as evident in my purchase and registration of a custom domain name &lt;code&gt;helenchong.dev&lt;/code&gt; for this website. That said, I do need to consider carefully about how much money I am going to spend, which factors in why I eventually chose Hostinger to host my websites.&lt;/p&gt;
+&lt;p&gt;Eventually, on 25 July 2024, I registered an account on Hostinger, and purchased their 48-month Premium Shared Hosting plan, then I migrated my websites starting from my hobby websites on the same day. Later, on 30 July 2024, I completed the migration of &lt;code&gt;helenchong.dev&lt;/code&gt; from GitHub Pages to Hostinger, and renamed the &lt;a href=&quot;https://github.com/helenclx/helenchong.dev&quot;&gt;website&#39;s GitHub repository&lt;/a&gt; from &lt;code&gt;helenclx.github.io&lt;/code&gt; to &lt;code&gt;helenchong.dev&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;heading-wrapper h2&quot;&gt;
+&lt;h2 id=&quot;why-hostinger&quot;&gt;Why Hostinger&lt;/h2&gt;
+&lt;a class=&quot;heading-anchor&quot; href=&quot;https://helenchong.dev/blog/posts/2024-07-31-migrating-to-hostinger/#why-hostinger&quot; aria-labelledby=&quot;why-hostinger&quot;&gt;&lt;span hidden=&quot;&quot;&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;heading-wrapper h3&quot;&gt;
+&lt;h3 id=&quot;affordable-price-with-regional-pricing&quot;&gt;Affordable Price with Regional Pricing&lt;/h3&gt;
+&lt;a class=&quot;heading-anchor&quot; href=&quot;https://helenchong.dev/blog/posts/2024-07-31-migrating-to-hostinger/#affordable-price-with-regional-pricing&quot; aria-labelledby=&quot;affordable-price-with-regional-pricing&quot;&gt;&lt;span hidden=&quot;&quot;&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The biggest draw about Hostinger is its pricing — it is not only cheap, but also offering regional pricing. This is a huge deal for people who live in countries with weaker currencies than US Dollars and Euro, as the pricing scales to the level we are more comfortable spending, without worrying about currency conversion rates.&lt;/p&gt;
+&lt;p&gt;For reference, as of this writing, 1 USD equals approximately 4.6 Malaysian Ringgit (MYR), while the minimum wage in Malaysia is 1,500 MYR, which approximately equals to 325.7 USD, per month. Therefore, if a Malaysian like me is going to spend money, every USD counts.&lt;/p&gt;
+&lt;p&gt;Compare the pricing of the 48-month Premium Shared Hosting plan of &lt;a href=&quot;https://www.hostinger.my/&quot;&gt;Hostinger.my&lt;/a&gt; to &lt;a href=&quot;https://www.hostinger.com/&quot;&gt;Hostinger.com&lt;/a&gt;: At the time of my purchase, the plan cost 7.99 per month in MYR (approximately 1.71 USD), while 2.99 per month in USD (approximately 13.97 MYR). This means I ended up saving almost 6 MYR per month by purchasing the plan on the Malaysian branch of Hostinger. This is just comparing Hostinger&#39;s own hosting plan with different currencies, let alone comparing Hostinger&#39;s hosting plan to its competitors.&lt;/p&gt;
+&lt;p&gt;As a bonus, being able to purchase Hostinger&#39;s hosting plans in Malaysian Ringgit means I can pay by directly transferring money from a Malaysian bank account.&lt;/p&gt;
+&lt;p&gt;Being cheap is not even the only reason I chose Hostinger; what is better than being cheap is to provide many, many features at the same time.&lt;/p&gt;
+&lt;div class=&quot;heading-wrapper h3&quot;&gt;
+&lt;h3 id=&quot;many-many-features-at-a-cheap-price&quot;&gt;Many, Many Features at a Cheap Price&lt;/h3&gt;
+&lt;a class=&quot;heading-anchor&quot; href=&quot;https://helenchong.dev/blog/posts/2024-07-31-migrating-to-hostinger/#many-many-features-at-a-cheap-price&quot; aria-labelledby=&quot;many-many-features-at-a-cheap-price&quot;&gt;&lt;span hidden=&quot;&quot;&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The cheap price of the Premium Shared Hosting Plan of Hostinger is jam-packed with many features, including but not limited to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ability to create up to 100 websites (which is significantly more than enough for average users)&lt;/li&gt;
+&lt;li&gt;100 GB SSD storage&lt;/li&gt;
+&lt;li&gt;Unlimited bandwidth&lt;/li&gt;
+&lt;li&gt;Unlimited MySQL databases&lt;/li&gt;
+&lt;li&gt;Email accounts included for free&lt;/li&gt;
+&lt;li&gt;Built-in Git support, which allows me to continue deploying my website from its Git repository&lt;/li&gt;
+&lt;li&gt;And more!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On the subject of email accounts, it is worth pointing out that Hostinger&#39;s Premium Shared Hosting plan allows you to create an email account for each website you made, and you can have up to 100 addresses and forwarders for each email account.&lt;/p&gt;
+&lt;p&gt;Hostinger&#39;s Git support allows you to even deploy multiple repositories to the same website, which was what I ended up doing to deploy &lt;a href=&quot;https://helenchong.dev/resume&quot;&gt;my resume&lt;/a&gt; into my website&#39;s directory, despite it having a &lt;a href=&quot;https://github.com/helenclx/resume&quot;&gt;separate Git repository&lt;/a&gt; from my website.&lt;/p&gt;
+&lt;div class=&quot;heading-wrapper h2&quot;&gt;
+&lt;h2 id=&quot;excellent-customer-support&quot;&gt;Excellent Customer Support&lt;/h2&gt;
+&lt;a class=&quot;heading-anchor&quot; href=&quot;https://helenchong.dev/blog/posts/2024-07-31-migrating-to-hostinger/#excellent-customer-support&quot; aria-labelledby=&quot;excellent-customer-support&quot;&gt;&lt;span hidden=&quot;&quot;&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;I am pleased to report that my experience with Hostinger&#39;s support team has been excellent.&lt;/p&gt;
+&lt;p&gt;After migrating this website to Hostinger, I was trying to deploy my resume to this website&#39;s directory. At first, I had an issue with my resume not being deployed to this website as I intended, so I sought for help by contacting Hostinger&#39;s support team via live chat. The support team answered to my message quickly. The specialist who handled my case were not only kind and polite, but also willing to walk me through the process of figuring out possible causes of my issue.&lt;/p&gt;
+&lt;p&gt;Turned out, I accidentally deployed my resume to a different website of mine, so I double-checked and reconfigured my set-up to deploy both my website and resume from their GitHub repositories to the correct directories, and my problem was finally solved.&lt;/p&gt;
+&lt;div class=&quot;heading-wrapper h2&quot;&gt;
+&lt;h2 id=&quot;domain-name-remaining-at-porkbun&quot;&gt;Domain Name Remaining at Porkbun&lt;/h2&gt;
+&lt;a class=&quot;heading-anchor&quot; href=&quot;https://helenchong.dev/blog/posts/2024-07-31-migrating-to-hostinger/#domain-name-remaining-at-porkbun&quot; aria-labelledby=&quot;domain-name-remaining-at-porkbun&quot;&gt;&lt;span hidden=&quot;&quot;&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;While Hostinger provides domain registration and transfer service, I chose to have the &lt;code&gt;helenchong.dev&lt;/code&gt; domain name stay with &lt;a href=&quot;https://porkbun.com/&quot;&gt;Porkbun&lt;/a&gt;, because I already spent money on the domain name, so Hostinger&#39;s hosting plan providing domain name registration for free for the first year does not benefit me.&lt;/p&gt;
+&lt;p&gt;In addition, Porkbun&#39;s renewal rate for domain names is cheaper than Hostinger. For example, Porkbun renews the &lt;code&gt;.com&lt;/code&gt; domain extension at 10.37 USD per year, while Hostinger renews at 15.99 USD per year. Even the Malaysian Ringgit pricing of Hostinger&#39;s domain renewal rate for &lt;code&gt;.com&lt;/code&gt;, 55.99 MYR per year, is still more expansive than Porkbun&#39;s approximately 47.76 MYR per year rate.&lt;/p&gt;
+&lt;div class=&quot;heading-wrapper h2&quot;&gt;
+&lt;h2 id=&quot;what-will-happen-to-my-github-pages-subdomain&quot;&gt;What will Happen to My GitHub Pages Subdomain&lt;/h2&gt;
+&lt;a class=&quot;heading-anchor&quot; href=&quot;https://helenchong.dev/blog/posts/2024-07-31-migrating-to-hostinger/#what-will-happen-to-my-github-pages-subdomain&quot; aria-labelledby=&quot;what-will-happen-to-my-github-pages-subdomain&quot;&gt;&lt;span hidden=&quot;&quot;&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Now that my website has migrated to Hostinger, what happens to &lt;code&gt;helenclx.github.io&lt;/code&gt;, my GitHub Pages subdomain now?&lt;/p&gt;
+&lt;p&gt;At the moment, I am still deploying projects to GitHub Pages, so the &lt;code&gt;helenclx.github.io&lt;/code&gt; subdomain is still being used by my projects on GitHub, but if you just visit &lt;code&gt;helenclx.github.io&lt;/code&gt; on its own, you will now get a 404 error page, indicating there is no longer a GitHub Pages site at this address.&lt;/p&gt;
+&lt;div class=&quot;heading-wrapper h2&quot;&gt;
+&lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h2&gt;
+&lt;a class=&quot;heading-anchor&quot; href=&quot;https://helenchong.dev/blog/posts/2024-07-31-migrating-to-hostinger/#wrapping-up&quot; aria-labelledby=&quot;wrapping-up&quot;&gt;&lt;span hidden=&quot;&quot;&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;I am glad to have made the decision to move hosts for this website. By migrating my developer portfolio and blog website to Hostinger, I felt like opening up new opportunities for my website to grow, and for myself to keep learning as a web developer.&lt;/p&gt;
+&lt;p&gt;As of this writing, I had created a &lt;code&gt;.htaccess&lt;/code&gt; for my website to set a custom 404 page, configure the cache policy of this website&#39;s static assets, and remove &lt;code&gt;.html&lt;/code&gt; file extension from website addresses. I am looking forward to exploring this new web hosting experience more.&lt;/p&gt;
+</content>
+        </entry>
         
         <entry>
             <title>Responsive Disability Pride Flag CSS Background</title>
@@ -310,27 +376,6 @@ eleventyConfig&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;
 &lt;p&gt;To learn more about the #100DaysOfCode challenge, visit &lt;a href=&quot;https://www.100daysofcode.com/&quot;&gt;its official website&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The #100DaysOfCode challenge has been a wonderful journey. I am glad I managed to motivate myself to code every day. Through various courses and projects, I have honed my front-end development skills a lot.&lt;/p&gt;
 &lt;p&gt;Thank you to everyone who has supported me throughout my 100 Days of Code journey, and has interacted with my posts on Twitter, Mastodon, Bluesky and the freeCodeCamp Discord serve, by replying to, liking or reposting.&lt;/p&gt;
-</content>
-        </entry>
-        
-        <entry>
-            <title>Rebuilding My Developer Portfolio with Eleventy</title>
-            <link href="https://helenchong.dev/blog/posts/2024-04-11-rebuilding-my-developer-portfolio-with-eleventy/"/>
-            <updated>2024-04-11T00:00:00Z</updated>
-            <id>https://helenchong.dev/blog/posts/2024-04-11-rebuilding-my-developer-portfolio-with-eleventy/</id>
-            <content type="html">&lt;p&gt;I have been taking courses to learn to code, starting from HTML, CSS and JavaScript, since December 2022. As I honed my front-end web development skills further by building projects, I quickly realised that I needed a portfolio website to showcase myself and my projects. Eventually, I launched my first developer portfolio website in February 2023, based on Kolade Chris tutorial &lt;a href=&quot;https://www.freecodecamp.org/news/how-to-build-a-developer-portfolio-website/&quot;&gt;&amp;quot;How to Build Your Own Developer Portfolio Website with HTML, CSS, and JavaScript&amp;quot;&lt;/a&gt; on freeCodeCamp, and deployed it to GitHub Pages.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://helenchong.dev/assets/images/posts/rebuilding-my-developer-portfolio-with-eleventy/Helen-Chong-portfolio-old.avif&quot; alt=&quot;First version of Helen Chong&#39;s developer portfolio&quot; loading=&quot;lazy&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;When I &lt;a href=&quot;https://twitter.com/helen_clx/status/1621696817795854336&quot;&gt;shared the first version of my developer portfolio website on Twitter&lt;/a&gt;, my tweet was liked and replied to by both &lt;a href=&quot;https://twitter.com/ossia/status/1621729431009071104&quot;&gt;Quincy Larson&lt;/a&gt;, the founder of freeCodeCamp, and &lt;a href=&quot;https://twitter.com/Ksound22/status/1621739428057079808&quot;&gt;Kolade Chris&lt;/a&gt; themselves, despite me not even tagging freeCodeCamp nor Kolade.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://helenchong.dev/assets/images/posts/rebuilding-my-developer-portfolio-with-eleventy/Quincy-Larson-Kolade-Chris-tweet-replies.avif&quot; alt=&quot;Quincy Larson and Kolade Chris&#39; replies to my tweet&quot; loading=&quot;lazy&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;As my front-end web development skills grew, I made my own improvements to the code of my portfolio website, most notably revamping the CSS to a mobile-first approach. In August 2023, I also &lt;a href=&quot;https://helenchong.dev/blog/posts/2023-08-21-Welcome-to-Helen-Codes&quot;&gt;launched my tech and coding blog&lt;/a&gt; to document my coding learnings and talk about various tech topics. At first, I tried to build my blog with a Jekyll template in a separate repository, but switched to &lt;a href=&quot;https://zonelets.net/&quot;&gt;Zonelets&lt;/a&gt;, so I can write and manage my blog in HTML, CSS and JavaScript, languages I was already familiar with, and moved my blog to my portfolio website&#39;s own repository.&lt;/p&gt;
-&lt;p&gt;However, as my portfolio website grew, I began to realise that writing all the code by hand makes a website tedious to maintain and update, especially if the website also includes a blog, since making new blog posts would require copy and pasting the same HTML heading over and over.&lt;/p&gt;
-&lt;p&gt;I started to research for ways to dynamically build a website, and as a result, I discovered more about static site generators (SSGs). I first heard of static site generators through GitHub and Jekyll, but I abandoned Jekyll after my brief attempt in building my blog with it, because Ruby is not a language I am familiar with, not to mention inconvenient to set up on Windows. Fortunately, I eventually discovered the ultimate solution to my problem: &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;Eleventy&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Eleventy stands out among other SSGs in its flexibility. It not only supports many template languages including HTML, Markdown, JavaScript, Nunjucks, Liquid, and even having its own web component template called &lt;a href=&quot;https://www.11ty.dev/docs/languages/webc/&quot;&gt;WebC&lt;/a&gt;, but also allows users to mix and match different template languages to build their own static websites. I like to be able to have control over how I build my own projects, which makes Eleventy an attractive option.&lt;/p&gt;
-&lt;p&gt;Thus, my Eleventy journey began. After reading the official Eleventy documentation and community Eleventy tutorials, as well as following along the tutorials, I created a new branch on my portfolio website repository to recreate my website and blog from scratch, based on Gerard Hynes&#39; tutorial &lt;a href=&quot;https://www.freecodecamp.org/news/learn-eleventy/&quot;&gt;&amp;quot;Learn the Eleventy Static Site Generator by Building and Deploying a Portfolio Website&amp;quot;&lt;/a&gt; on freeCodeCamp and Raymond Camden&#39;s &lt;a href=&quot;https://cfjedimaster.github.io/eleventy-blog-guide/guide.html&quot;&gt;&amp;quot;A Complete Guide to Building a Blog with Eleventy&amp;quot;&lt;/a&gt;, then migrating my website&#39;s content and blog posts to Eleventy. I also look at Eleventy&#39;s &lt;a href=&quot;https://github.com/11ty/eleventy-base-blog&quot;&gt;official blog starter project&lt;/a&gt; for inspiration.&lt;/p&gt;
-&lt;p&gt;Finally, on 9 April 2024, I succeed in rebuilding my developer portfolio website in Eleventy!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://helenchong.dev/assets/images/posts/rebuilding-my-developer-portfolio-with-eleventy/Helen-Chong-portfolio-eleventy.avif&quot; alt=&quot;Helen Chong&#39;s new developer portfolio&quot; loading=&quot;lazy&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;Using a static site generator to build my own websites has been a great learning experience, from creating layouts, templates, installing plug-ins, to setting up GitHub Actions. I am glad that I have learned a great tool to build and maintain my static website projects in a dynamic, flexible and efficient manner.&lt;/p&gt;
-&lt;p&gt;Welcome to Helen Chong&#39;s brand new Eleventy portfolio website!🎉&lt;/p&gt;
 </content>
         </entry>
 </feed>
