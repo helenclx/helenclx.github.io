@@ -1,9 +1,15 @@
 const darkModePreference = window.matchMedia("(prefers-color-scheme: dark)");
+    const websiteCarbonBadge = document.getElementById("wcb");
+
+    if (window.matchMedia && darkModePreference.matches) {
+        websiteCarbonBadge.classList.add("wcb-d");
+    }
+
     darkModePreference.addEventListener("change", (event) => {
         if (event.matches) {
-            document.getElementById("wcb").classList.add("wcb-d");
+            websiteCarbonBadge.classList.add("wcb-d");
         } else {
-            document.getElementById("wcb").classList.remove("wcb-d");
+            websiteCarbonBadge.classList.remove("wcb-d");
         }
     });
 const topButton = document.querySelector(".top-btn");
