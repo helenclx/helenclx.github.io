@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>Helen Chong&#39;s Developer Blog</title>
+    <title>Helen Chong's Developer Blog</title>
     <subtitle>Helen Chong talks about tech, coding and development</subtitle>
     <link href="https://helenchong.dev/blog/feed.xml" rel="self"/>
     <link href="https://helenchong.dev/blog/"/>
