@@ -97,7 +97,7 @@
 
     .header__link {
         position: relative;
-        font-size: 1.25em;
+        font-size: 1.15em;
         text-decoration: none;
     }
 
@@ -179,8 +179,12 @@
         display: flex;
         gap: 0.5em;
         flex-direction: column;
+        justify-content: center;
+        align-tems: center;
         box-shadow: var(--bs-footer);
-    }</style>
+    }
+
+    .footer img { margin: 0 auto 0.8em; }</style>
 
         
         <link rel="me" href="mailto:contact@helenchong.dev">
@@ -236,6 +240,12 @@
         <li><a
             
             class="header__link "
+            href="/links/">
+                Links
+        </a></li>
+        <li><a
+            
+            class="header__link "
             href="/contact/">
                 Contact
         </a></li>
@@ -271,6 +281,12 @@
             class="header__link "
             href="/projects/">
                 Projects
+        </a></li>
+        <li><a
+            
+            class="header__link "
+            href="/links/">
+                Links
         </a></li>
         <li><a
             
@@ -332,8 +348,10 @@
 </content-wrapper>
         </main>
         <footer class="footer">
+    <img src="/assets/icons/helenchong-88x31.png" alt="Helen Chong's 88x31 website button" width="88" height="31">
+
     <nav class="socials" aria-labelledby="social-link-title">
-    <h2 class="visually-hidden" id="social-link-title">Social Links:</h2>
+    <h2 class="visually-hidden" id="social-link-title">Social Links</h2>
     <ul class="socials__links">
         <li>
             <a href="https://github.com/helenclx" aria-label="GitHub" rel="me">
